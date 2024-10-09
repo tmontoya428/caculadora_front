@@ -10,7 +10,7 @@ function Calculadora(){
     function handleSubmit(e){
         e.preventDefault();
         const operacion = e.target.value;
-        fetch(`https://vercel.live/link/calculadora-back-tau.vercel.app?via=project-dashboard-alias-list&p=1/v1/calculadora/${operacion}`, {
+        fetch(`https://calculadora-back-tau.vercel.app/v1/calculadora/${operacion}`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({number1, number2})
